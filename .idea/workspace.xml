@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6e727cd0-d3c5-4c85-81b3-77d804829959" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1b4MlbP5r20FC4awY8upyBMOlYZ" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/tools" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/tools" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Lexer (1)">
+    <configuration name="Lex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.tools.lex.Lex" />
+      <module name="Lex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.tools.lex.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lexer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.tools.lex02.Lexer" />
+      <module name="Lex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.tools.lex02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.tools.lex01.Lexer" />
+      <module name="Lex" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.tools.lex01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Lexer (1)" />
+        <item itemvalue="Application.Lexer" />
+        <item itemvalue="Application.Lex" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6e727cd0-d3c5-4c85-81b3-77d804829959" name="Default Changelist" comment="" />
+      <created>1587887064316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587887064316</updated>
+      <workItem from="1587887068405" duration="26174000" />
+      <workItem from="1588038278820" duration="18434000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2453" y="259" key="#com.intellij.ide.util.MemberChooser" timestamp="1588057032239">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2453" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587985184673" />
+    <state x="2453" y="259" key="#com.intellij.ide.util.MemberChooser/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587888317177" />
+    <state x="2453" y="259" key="#com.intellij.ide.util.MemberChooser/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588057032239" />
+    <state x="2506" y="267" key="#xdebugger.evaluate" timestamp="1587893815062">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2506" y="267" key="#xdebugger.evaluate/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587893815062" />
+    <state width="465" height="467" key="DebuggerActiveHint" timestamp="1588060966230">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="435" height="477" key="DebuggerActiveHint/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044243070" />
+    <state width="432" height="466" key="DebuggerActiveHint/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587893799154" />
+    <state width="465" height="477" key="DebuggerActiveHint/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588046625150" />
+    <state width="452" height="477" key="DebuggerActiveHint/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039577061" />
+    <state width="465" height="467" key="DebuggerActiveHint/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588060966230" />
+    <state width="1878" height="104" key="GridCell.Tab.0.bottom" timestamp="1588064015472">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371305" />
+    <state width="1878" height="183" key="GridCell.Tab.0.bottom/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587915269700" />
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944269" />
+    <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773244" />
+    <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588056296414" />
+    <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640665" />
+    <state width="1878" height="104" key="GridCell.Tab.0.bottom/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588064015472" />
+    <state width="1878" height="104" key="GridCell.Tab.0.center" timestamp="1588064015471">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="235" key="GridCell.Tab.0.center/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371301" />
+    <state width="1878" height="183" key="GridCell.Tab.0.center/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587915269699" />
+    <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944267" />
+    <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773243" />
+    <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588056296412" />
+    <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640663" />
+    <state width="1878" height="104" key="GridCell.Tab.0.center/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588064015471" />
+    <state width="1878" height="104" key="GridCell.Tab.0.left" timestamp="1588064015471">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="235" key="GridCell.Tab.0.left/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371300" />
+    <state width="1878" height="183" key="GridCell.Tab.0.left/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587915269698" />
+    <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944266" />
+    <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773242" />
+    <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588056296412" />
+    <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640662" />
+    <state width="1878" height="104" key="GridCell.Tab.0.left/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588064015471" />
+    <state width="1878" height="104" key="GridCell.Tab.0.right" timestamp="1588064015472">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="235" key="GridCell.Tab.0.right/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371302" />
+    <state width="1878" height="183" key="GridCell.Tab.0.right/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587915269699" />
+    <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944268" />
+    <state width="1878" height="235" key="GridCell.Tab.0.right/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773244" />
+    <state width="1878" height="235" key="GridCell.Tab.0.right/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588056296413" />
+    <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640664" />
+    <state width="1878" height="104" key="GridCell.Tab.0.right/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588064015472" />
+    <state width="1878" height="206" key="GridCell.Tab.1.bottom" timestamp="1588063363184">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="217" key="GridCell.Tab.1.bottom/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044321569" />
+    <state width="1878" height="207" key="GridCell.Tab.1.bottom/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587895594725" />
+    <state width="1878" height="217" key="GridCell.Tab.1.bottom/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047636090" />
+    <state width="1878" height="217" key="GridCell.Tab.1.bottom/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039599663" />
+    <state width="1878" height="206" key="GridCell.Tab.1.bottom/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588063363184" />
+    <state width="1878" height="206" key="GridCell.Tab.1.center" timestamp="1588063363183">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="217" key="GridCell.Tab.1.center/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044321568" />
+    <state width="1878" height="207" key="GridCell.Tab.1.center/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587895594724" />
+    <state width="1878" height="217" key="GridCell.Tab.1.center/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047636089" />
+    <state width="1878" height="217" key="GridCell.Tab.1.center/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039599662" />
+    <state width="1878" height="206" key="GridCell.Tab.1.center/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588063363183" />
+    <state width="1878" height="206" key="GridCell.Tab.1.left" timestamp="1588063363182">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="217" key="GridCell.Tab.1.left/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044321567" />
+    <state width="1878" height="207" key="GridCell.Tab.1.left/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587895594724" />
+    <state width="1878" height="217" key="GridCell.Tab.1.left/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047636089" />
+    <state width="1878" height="217" key="GridCell.Tab.1.left/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039599661" />
+    <state width="1878" height="206" key="GridCell.Tab.1.left/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588063363182" />
+    <state width="1878" height="206" key="GridCell.Tab.1.right" timestamp="1588063363183">
+      <screen x="1680" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="217" key="GridCell.Tab.1.right/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044321569" />
+    <state width="1878" height="207" key="GridCell.Tab.1.right/0.23.1680.936/1680.23.1920.1057@1680.23.1920.1057" timestamp="1587895594724" />
+    <state width="1878" height="217" key="GridCell.Tab.1.right/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047636090" />
+    <state width="1878" height="217" key="GridCell.Tab.1.right/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039599662" />
+    <state width="1878" height="206" key="GridCell.Tab.1.right/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588063363183" />
+    <state x="2141" y="179" key="SettingsEditor" timestamp="1587984785437">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2141" y="179" key="SettingsEditor/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587984785437" />
+    <state x="2317" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1588038308411">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2317" y="372" key="com.intellij.ide.util.TipDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588038308411" />
+    <state x="2295" y="162" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587981228065">
+      <screen x="1680" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2295" y="162" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587981228065" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java</url>
+          <line>182</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java</url>
+          <line>143</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java</url>
+          <line>210</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex02/Lexer.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex02/Lexer.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex02/Lexer.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex02/Lexer.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
