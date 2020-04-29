@@ -52,24 +52,27 @@ public class Lexer {
         return this;
     }
 
-    private List<Token> parse() {
-        List<Token> result = new ArrayList<>();
+    public Token nextToken() {
+        Token result = null;
+        loop:
         do {
             nextChar();
             switch (state) {
                 case INITIALIZE:
-                    nextState(result);
+                    nextState();
                     break;
                 case INT_1:
                     if (!isAlpha() && !isDigit()) {
-                        nextState(result);
+                        result = nextState();
+                        break loop;
                     }
                     state = ch == 'n' ? State.INT_2 : State.IDENTIFIER;
                     addMorpheme();
                     break;
                 case INT_2:
                     if (!isAlpha() && !isDigit()) {
-                        nextState(result);
+                        result = nextState();
+                        break loop;
                     }
                     state = ch == 't' ? State.INT_3 : State.IDENTIFIER;
                     addMorpheme();
@@ -77,7 +80,8 @@ public class Lexer {
                 case INT_3:
                     if (isBlank()) {
                         tokenKin = TokenKin.INT;
-                        nextState(result);
+                        result = nextState();
+                        break loop;
                     } else {
                         addMorpheme();
                         state = State.IDENTIFIER;
@@ -87,14 +91,16 @@ public class Lexer {
                     if (isDigit()) {
                         addMorpheme();
                     } else {
-                        nextState(result);
+                        result = nextState();
+                        break loop;
                     }
                     break;
                 case IDENTIFIER:
                     if (isDigit() || isAlpha()) {
                         addMorpheme();
                     } else {
-                        nextState(result);
+                        result = nextState();
+                        break loop;
                     }
                     break;
                 case EQEQ_1:
@@ -103,16 +109,27 @@ public class Lexer {
                         tokenKin = TokenKin.EQEQ;
                         state = State.EQEQ_2;
                     } else {
-                        nextState(result);
+                        result = nextState();
+                        break loop;
                     }
                     break;
                 case EQEQ_2:
                 case SEMI:
                 case EQ:
-                    nextState(result);
+                default:
+                    result = nextState();
+                    break loop;
             }
         } while (ch != EOI);
         return result;
+    }
+
+    private void parse() {
+        while (true) {
+            var token = nextToken();
+            if (Objects.isNull(token)) break;
+            log.info("{}", token);
+        }
     }
 
     private void addMorpheme() {
@@ -123,10 +140,11 @@ public class Lexer {
     /**
      * 状态流转
      */
-    private void nextState(List<Token> result) {
+    private Token nextState() {
+        Token result = null;
         if (Objects.nonNull(sbuf)) {
             try {
-                result.add(new Token(symbolTable.getAttribute(sbuf), tokenKin));
+                result = new Token(symbolTable.getAttribute(sbuf), tokenKin);
             } finally {
                 sbuf = null;
             }
@@ -173,6 +191,7 @@ public class Lexer {
             default: state = State.INITIALIZE;
             //@formatter:on
         }
+        return result;
     }
 
     /**
@@ -229,7 +248,9 @@ public class Lexer {
     }
 
     private void nextChar() {
-        ch = codes[index < codes.length ? index++ : index];
+        if (index < codes.length) {
+            ch = codes[index++];
+        }
     }
 
     static class Token {
@@ -331,6 +352,6 @@ public class Lexer {
     }
 
     public static void main(String[] agrs) {
-        new Lexer("itt value = 100;").init().parse().forEach(x -> log.info("{}", x));
+        new Lexer("int a;").init().parse();
     }
 }

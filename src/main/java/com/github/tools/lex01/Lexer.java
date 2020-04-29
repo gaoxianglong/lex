@@ -74,12 +74,13 @@ public class Lexer {
     }
 
     /**
-     * 开始词法解析
+     * 读取下一个Token
      *
      * @return
      */
-    private List<Token> parse() {
-        List<Token> result = new ArrayList<>();
+    private Token nextToken() {
+        Token result = null;
+        loop:
         do {
             nextChar();
             //@formatter:off
@@ -99,30 +100,44 @@ public class Lexer {
                 case 'u': case 'v': case 'w': case 'x': case 'y':
                 case 'z':
                 case '$': case '_':
-                    result.add(scanIdent());
-                    break;
+                    result = scanIdent();
+                    break loop;
                 case '0': case '1': case '2': case '3': case '4':
                 case '5': case '6': case '7': case '8': case '9':
-                    result.add(scanNumber());
-                    break;
+                    result = scanNumber();
+                    break loop;
                 //@formatter:on
                 case ';':
                     try {
                         addMorpheme();
                         var attribute = symbolTable.getAttribute(sbuf);
-                        result.add(new Token(attribute, getTokenKin(attribute.flag)));
+                        result = new Token(attribute, getTokenKin(attribute.flag));
                     } finally {
                         sbuf = null;
                     }
-                    break;
+                    break loop;
                 default:
                     var token = scanOperator();
                     if (Objects.nonNull(token)) {
-                        result.add(token);
+                        result = token;
                     }
+                    break loop;
             }
         } while (ch != EOI);//当读入到结束符号时退出
         return result;
+    }
+
+    /**
+     * 开始词法解析
+     *
+     * @return
+     */
+    private void parse() {
+        while (true) {
+            var token = nextToken();
+            if (Objects.isNull(token)) break;
+            log.info("{}", token);
+        }
     }
 
     /**
@@ -262,7 +277,9 @@ public class Lexer {
      * 移动索引，读取下一个符号
      */
     private void nextChar() {
-        ch = codes[index < codes.length ? index++ : index];
+        if (index < codes.length) {
+            ch = codes[index++];
+        }
     }
 
     /**
@@ -418,6 +435,6 @@ public class Lexer {
     }
 
     public static void main(String[] agrs) {
-        new Lexer("int i=100;").init().parse().forEach(System.out::println);
+        new Lexer("int i=100;").init().parse();
     }
 }
