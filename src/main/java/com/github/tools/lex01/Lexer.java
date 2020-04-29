@@ -435,6 +435,6 @@ public class Lexer {
     }
 
     public static void main(String[] agrs) {
-        new Lexer("int i=100;").init().parse();
+        new Lexer("int value = 100;").init().parse();
     }
 }
