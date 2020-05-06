@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6e727cd0-d3c5-4c85-81b3-77d804829959" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tools/lex01/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/tools/lex02/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/tools/lex02/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$Attribute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$Attribute.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$Chars.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$Chars.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$SymbolTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$SymbolTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer$TokenKin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/tools/lex01/Lexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/tools/lex02/Lexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/tools/lex02/Lexer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +165,7 @@
       <workItem from="1588211515419" duration="3056000" />
       <workItem from="1588643803814" duration="8461000" />
       <workItem from="1588686173957" duration="12770000" />
-      <workItem from="1588729975222" duration="8516000" />
+      <workItem from="1588729975222" duration="9583000" />
     </task>
     <servers />
   </component>
@@ -205,7 +196,7 @@
     <state width="452" height="477" key="DebuggerActiveHint/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039577061" />
     <state width="465" height="467" key="DebuggerActiveHint/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588060966230" />
     <state width="465" height="467" key="DebuggerActiveHint/0.23.1680.949/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588688531512" />
-    <state width="1878" height="172" key="GridCell.Tab.0.bottom" timestamp="1588749427096">
+    <state width="1878" height="172" key="GridCell.Tab.0.bottom" timestamp="1588749445700">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371305" />
@@ -214,13 +205,13 @@
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944269" />
     <state width="1878" height="226" key="GridCell.Tab.0.bottom/0.23.1680.941/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588731224490" />
     <state width="1878" height="235" key="GridCell.Tab.0.bottom/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773244" />
-    <state width="1878" height="172" key="GridCell.Tab.0.bottom/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749427096" />
+    <state width="1878" height="172" key="GridCell.Tab.0.bottom/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749445700" />
     <state width="1878" height="290" key="GridCell.Tab.0.bottom/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640665" />
     <state width="1878" height="206" key="GridCell.Tab.0.bottom/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588725415691" />
     <state width="1638" height="187" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1588643870548" />
     <state width="1878" height="226" key="GridCell.Tab.0.bottom/0.23.1680.949/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588692450734" />
     <state width="1878" height="284" key="GridCell.Tab.0.bottom/0.23.1680.952/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588156423497" />
-    <state width="1878" height="172" key="GridCell.Tab.0.center" timestamp="1588749427095">
+    <state width="1878" height="172" key="GridCell.Tab.0.center" timestamp="1588749445699">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371301" />
@@ -229,13 +220,13 @@
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944267" />
     <state width="1878" height="226" key="GridCell.Tab.0.center/0.23.1680.941/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588731224489" />
     <state width="1878" height="235" key="GridCell.Tab.0.center/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773243" />
-    <state width="1878" height="172" key="GridCell.Tab.0.center/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749427095" />
+    <state width="1878" height="172" key="GridCell.Tab.0.center/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749445699" />
     <state width="1878" height="290" key="GridCell.Tab.0.center/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640663" />
     <state width="1878" height="206" key="GridCell.Tab.0.center/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588725415690" />
     <state width="1638" height="187" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1588643870547" />
     <state width="1878" height="226" key="GridCell.Tab.0.center/0.23.1680.949/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588692450733" />
     <state width="1878" height="284" key="GridCell.Tab.0.center/0.23.1680.952/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588156423496" />
-    <state width="1878" height="172" key="GridCell.Tab.0.left" timestamp="1588749427095">
+    <state width="1878" height="172" key="GridCell.Tab.0.left" timestamp="1588749445698">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371300" />
@@ -244,13 +235,13 @@
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944266" />
     <state width="1878" height="226" key="GridCell.Tab.0.left/0.23.1680.941/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588731224488" />
     <state width="1878" height="235" key="GridCell.Tab.0.left/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773242" />
-    <state width="1878" height="172" key="GridCell.Tab.0.left/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749427095" />
+    <state width="1878" height="172" key="GridCell.Tab.0.left/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749445698" />
     <state width="1878" height="290" key="GridCell.Tab.0.left/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640662" />
     <state width="1878" height="206" key="GridCell.Tab.0.left/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588725415689" />
     <state width="1638" height="187" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1588643870546" />
     <state width="1878" height="226" key="GridCell.Tab.0.left/0.23.1680.949/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588692450732" />
     <state width="1878" height="284" key="GridCell.Tab.0.left/0.23.1680.952/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588156423495" />
-    <state width="1878" height="172" key="GridCell.Tab.0.right" timestamp="1588749427095">
+    <state width="1878" height="172" key="GridCell.Tab.0.right" timestamp="1588749445700">
       <screen x="1680" y="23" width="1920" height="1057" />
     </state>
     <state width="1878" height="235" key="GridCell.Tab.0.right/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588044371302" />
@@ -259,7 +250,7 @@
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1680.941/1680.0.1920.1080@1680.0.1920.1080" timestamp="1587989944268" />
     <state width="1878" height="226" key="GridCell.Tab.0.right/0.23.1680.941/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588731224490" />
     <state width="1878" height="235" key="GridCell.Tab.0.right/0.23.1680.944/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588047773244" />
-    <state width="1878" height="172" key="GridCell.Tab.0.right/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749427095" />
+    <state width="1878" height="172" key="GridCell.Tab.0.right/0.23.1680.944/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588749445700" />
     <state width="1878" height="290" key="GridCell.Tab.0.right/0.23.1680.947/1680.0.1920.1080@1680.0.1920.1080" timestamp="1588039640664" />
     <state width="1878" height="206" key="GridCell.Tab.0.right/0.23.1680.947/1680.23.1920.1057@1680.23.1920.1057" timestamp="1588725415690" />
     <state width="1638" height="187" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1588643870547" />
@@ -352,7 +343,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/github/tools/lex02/Lexer.java</url>
-          <line>128</line>
+          <line>126</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

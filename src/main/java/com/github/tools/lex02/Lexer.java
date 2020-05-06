@@ -33,13 +33,12 @@ public class Lexer {
     private char[] sbuf;
     private char[] codes;
     private State state;
-    private TokenKin tokenKin;
+    private TokenKind tokenKind;
     private final byte EOI = 0x1A;
     private static Logger log = LoggerFactory.getLogger(Lexer.class);
 
     private Lexer(String str) {
         Objects.requireNonNull(str);
-        //symbolTable = new SymbolTable();
         codes = str.toCharArray();
         codes = Arrays.copyOf(codes, codes.length + 1);
         codes[codes.length - 1] = EOI;
@@ -77,7 +76,7 @@ public class Lexer {
                     break;
                 case INT_3:
                     if (isBlank()) {
-                        tokenKin = TokenKin.INT;
+                        tokenKind = TokenKind.INT;
                         result = nextState();
                         break loop;
                     } else {
@@ -104,7 +103,7 @@ public class Lexer {
                 case EQEQ_1:
                     if (ch == '=') {
                         addMorpheme();
-                        tokenKin = TokenKin.EQEQ;
+                        tokenKind = TokenKind.EQEQ;
                         state = State.EQEQ_2;
                     } else {
                         result = nextState();
@@ -142,7 +141,7 @@ public class Lexer {
         Token result = null;
         if (Objects.nonNull(sbuf)) {
             try {
-                result = new Token(sbuf, tokenKin);
+                result = new Token(sbuf, tokenKind);
             } finally {
                 sbuf = null;
             }
@@ -168,23 +167,23 @@ public class Lexer {
                     case 'i': state = State.INT_1; break;
                     default : state = State.IDENTIFIER;
                 }
-                tokenKin = TokenKin.IDENTIFIER;
+                tokenKind = TokenKind.IDENTIFIER;
                 break;
             case '0': case '1': case '2': case '3': case '4':
             case '5': case '6': case '7': case '8': case '9':
                 addMorpheme();
                 state = State.INTLITERAL;
-                tokenKin = TokenKin.INTLITERAL;
+                tokenKind = TokenKind.INTLITERAL;
                 break;
             case '=':
                 addMorpheme();
                 state = State.EQEQ_1;//直接进入EQEQ状态,如果最后词素不为'=='，再回滚到EQ状态
-                tokenKin = TokenKin.EQ;
+                tokenKind = TokenKind.EQ;
                 break;
             case ';':
                 addMorpheme();
                 state = State.SEMI;
-                tokenKin = TokenKin.SEMI;
+                tokenKind = TokenKind.SEMI;
                 break;
             default: state = State.INITIALIZE;
             //@formatter:on
@@ -259,33 +258,33 @@ public class Lexer {
         /**
          * Token类型
          */
-        private TokenKin tokenKin;
+        private TokenKind tokenKind;
 
-        private Token(char[] morpheme, TokenKin tokenKin) {
+        private Token(char[] morpheme, TokenKind tokenKind) {
             this.morpheme = morpheme;
-            this.tokenKin = tokenKin;
+            this.tokenKind = tokenKind;
         }
 
         @Override
         public String toString() {
             return "Token{" +
                     "morpheme=" + new String(morpheme) +
-                    ", tokenKin=" + tokenKin +
+                    ", tokenKind=" + tokenKind +
                     '}';
         }
     }
 
-    enum TokenKin {
+    enum TokenKind {
         //@formatter:off
         IDENTIFIER, INT("int"), EQ("="), INTLITERAL("0-9"),
         SEMI(";"), LT("<"), GT(">"), EQEQ("==");
         //@formatter:on
         private String name;
 
-        TokenKin() {
+        TokenKind() {
         }
 
-        TokenKin(String name) {
+        TokenKind(String name) {
             this.name = name;
         }
     }
