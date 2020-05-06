@@ -19,7 +19,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 词法分析器
@@ -35,13 +34,12 @@ public class Lexer {
     private char[] codes;
     private State state;
     private TokenKin tokenKin;
-    private SymbolTable symbolTable;
     private final byte EOI = 0x1A;
     private static Logger log = LoggerFactory.getLogger(Lexer.class);
 
     private Lexer(String str) {
         Objects.requireNonNull(str);
-        symbolTable = new SymbolTable();
+        //symbolTable = new SymbolTable();
         codes = str.toCharArray();
         codes = Arrays.copyOf(codes, codes.length + 1);
         codes[codes.length - 1] = EOI;
@@ -144,7 +142,7 @@ public class Lexer {
         Token result = null;
         if (Objects.nonNull(sbuf)) {
             try {
-                result = new Token(symbolTable.getAttribute(sbuf), tokenKin);
+                result = new Token(sbuf, tokenKin);
             } finally {
                 sbuf = null;
             }
@@ -257,75 +255,23 @@ public class Lexer {
         /**
          * Token对应的相关属性
          */
-        private Attribute attribute;
+        private char[] morpheme;
         /**
          * Token类型
          */
         private TokenKin tokenKin;
 
-        private Token(Attribute attribute, TokenKin tokenKin) {
-            this.attribute = attribute;
+        private Token(char[] morpheme, TokenKin tokenKin) {
+            this.morpheme = morpheme;
             this.tokenKin = tokenKin;
         }
 
         @Override
         public String toString() {
             return "Token{" +
-                    "attribute=" + attribute +
+                    "morpheme=" + new String(morpheme) +
                     ", tokenKin=" + tokenKin +
                     '}';
-        }
-    }
-
-    static class SymbolTable {
-        private Map<Chars, Attribute> attributes;
-
-        private SymbolTable() {
-            attributes = new ConcurrentHashMap<>();
-        }
-
-        private Attribute getAttribute(char[] morpheme) {
-            var chars = new Chars(morpheme);
-            var attribute = attributes.get(chars);
-            if (Objects.isNull(attribute)) {
-                attribute = new Attribute(morpheme);
-                attributes.put(chars, attribute);
-            }
-            return attribute;
-        }
-    }
-
-    static class Chars {
-        private char[] morpheme;
-
-        private Chars(char[] morpheme) {
-            this.morpheme = morpheme;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof Chars)) return false;
-            Chars chars = (Chars) o;
-            return Arrays.equals(morpheme, chars.morpheme);
-        }
-
-        @Override
-        public int hashCode() {
-            return Arrays.hashCode(morpheme);
-        }
-    }
-
-    static class Attribute {
-        private char[] morpheme;
-
-        private Attribute(char[] morpheme) {
-            this.morpheme = morpheme;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("morpheme:'%s'", new String(morpheme));
         }
     }
 
@@ -352,6 +298,6 @@ public class Lexer {
     }
 
     public static void main(String[] agrs) {
-        new Lexer("int a;").init().parse();
+        new Lexer("int a=100;").init().parse();
     }
 }

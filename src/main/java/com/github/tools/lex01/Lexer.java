@@ -59,7 +59,15 @@ public class Lexer {
      */
     private final byte EOI = 0x1A;
     /**
-     * Attribute.flag对应TokenKin枚举ID
+     * 换行符
+     */
+    private final byte LF = 0xA;
+    /**
+     * 回车符
+     */
+    private final byte CR = 0xD;
+    /**
+     * 反向索引表,Attribute.flag对应TokenKin枚举ID
      */
     private Map<Integer, Integer> indexs;
     private static Logger log = LoggerFactory.getLogger(Lexer.class);
@@ -110,11 +118,13 @@ public class Lexer {
                 case ';':
                     try {
                         addMorpheme();
-                        var attribute = symbolTable.getAttribute(sbuf);
-                        result = new Token(attribute, getTokenKin(attribute.flag));
+                        result = getToken();
                     } finally {
                         sbuf = null;
                     }
+                    break loop;
+                case '\"':
+                    result = scanString();
                     break loop;
                 default:
                     var token = scanOperator();
@@ -146,8 +156,27 @@ public class Lexer {
      * @param flag
      * @return
      */
-    private TokenKin getTokenKin(int flag) {
-        return flag < maxLength ? TokenKin.values()[indexs.get(flag)] : TokenKin.IDENTIFIER;
+    private TokenKind getTokenKin(int flag) {
+        return flag <= maxLength ? TokenKind.values()[indexs.get(flag)] : TokenKind.IDENTIFIER;
+    }
+
+    /**
+     * 字符串读取
+     *
+     * @return
+     */
+    private Token scanString() {
+        do {
+            addMorpheme();
+            nextChar();
+        } while (ch != '\"' && ch != CR && ch != LF && ch != EOI);
+        if (ch != '\"') throw new RuntimeException(String.format("词法解析错误:%s", new String(sbuf)));
+        addMorpheme();
+        try {
+            return getToken(TokenKind.STRINGLITERAL);
+        } finally {
+            sbuf = null;
+        }
     }
 
     /**
@@ -161,13 +190,12 @@ public class Lexer {
                 case '!': case '%': case '&': case '*':
                 case '?': case '+': case '-': case ':':
                 case '<': case '=': case '>': case '^':
-                case '|': case '~': case '@':
+                case '|': case '~': case '@': case '/':
                     break;
                 //@formatter:on
                 default:
                     try {
-                        var attribute = symbolTable.getAttribute(sbuf);
-                        return new Token(attribute, getTokenKin(attribute.flag));
+                        return getToken();
                     } finally {
                         prevChar();
                         sbuf = null;
@@ -175,12 +203,11 @@ public class Lexer {
             }
             addMorpheme();
             var attribute = symbolTable.getAttribute(sbuf);
-            var tokenKin = getTokenKin(attribute.flag);
-            if (TokenKin.IDENTIFIER == tokenKin) {
+            var tokenKind = getTokenKin(attribute.flag);
+            if (TokenKind.IDENTIFIER == tokenKind) {
                 try {
                     sbuf = Arrays.copyOf(sbuf, sbuf.length - 1);
-                    attribute = symbolTable.getAttribute(sbuf);
-                    return new Token(attribute, getTokenKin(attribute.flag));
+                    return getToken();
                 } finally {
                     prevChar();
                     sbuf = null;
@@ -202,8 +229,7 @@ public class Lexer {
                     break;
                 default:
                    try{
-                       var attribute = symbolTable.getAttribute(sbuf);
-                       return new Token(attribute,TokenKin.INTLITERAL);
+                       return getToken(TokenKind.INTLITERAL);
                    }finally{
                        prevChar();
                        sbuf = null;
@@ -243,7 +269,7 @@ public class Lexer {
                 //@formatter:on
                 default:
                     try {
-                        return getToken(symbolTable.getAttribute(sbuf));
+                        return getToken();
                     } finally {
                         prevChar();
                         sbuf = null;
@@ -265,12 +291,17 @@ public class Lexer {
     /**
      * 封装返回Token
      *
-     * @param attribute
      * @return
      */
-    private Token getToken(Attribute attribute) {
-        Objects.requireNonNull(attribute);
-        return new Token(attribute, getTokenKin(attribute.flag));
+    private Token getToken(TokenKind tokenKin) {
+        var attribute = symbolTable.getAttribute(sbuf);//从符号表中获取出属性对象
+        //根据属性对象的flag字段从反向索引表中获取出TokenKin的序数，再根据序数获取出对应的TokenKin
+        return new Token(attribute, Objects.isNull(tokenKin) ?
+                getTokenKin(attribute.flag) : tokenKin);
+    }
+
+    private Token getToken() {
+        return getToken(null);
     }
 
     /**
@@ -295,13 +326,13 @@ public class Lexer {
      * @return
      */
     private Lexer init() {
-        TokenKin[] tokenKins = TokenKin.values();
-        Stream.of(tokenKins).forEach(tokenKin -> {
-            var name = tokenKin.name;
+        TokenKind[] tokenKins = TokenKind.values();
+        Stream.of(tokenKins).forEach(tokenKind -> {
+            var name = tokenKind.name;
             if (Objects.nonNull(name)) {
-                var attribute = symbolTable.getAttribute(name.toCharArray());
+                var attribute = symbolTable.getAttribute(name.toCharArray());//根据词素从符号表中获取出对应的属性对象，如果不存在就先添加
                 var flag = attribute.flag;
-                indexs.put(flag, tokenKin.ordinal());
+                indexs.put(flag, tokenKind.ordinal());
                 maxLength = maxLength < flag ? flag : maxLength;
             }
         });
@@ -324,7 +355,7 @@ public class Lexer {
         }
 
         /**
-         * 根据词素获取出对应的Attribute，如果不存在就先添加
+         * 根据词素从符号表中获取出对应的属性对象，如果不存在就先添加
          *
          * @param morpheme
          * @return
@@ -352,18 +383,18 @@ public class Lexer {
         /**
          * Token类型
          */
-        private TokenKin tokenKin;
+        private TokenKind tokenKind;
 
-        private Token(Attribute attribute, TokenKin tokenKin) {
+        private Token(Attribute attribute, TokenKind tokenKind) {
             this.attribute = attribute;
-            this.tokenKin = tokenKin;
+            this.tokenKind = tokenKind;
         }
 
         @Override
         public String toString() {
             return "Token{" +
                     "attribute:" + attribute +
-                    ", tokenKin:" + tokenKin +
+                    ", tokenKind:" + tokenKind +
                     '}';
         }
     }
@@ -371,20 +402,21 @@ public class Lexer {
     /**
      * 目前仅支持一些二元表达式
      */
-    enum TokenKin {
+    enum TokenKind {
         //@formatter:off
         IDENTIFIER, INT("int"), EQ("="), INTLITERAL("0-9"),
         SEMI(";"), LT("<"), GT(">"), EQEQ("=="),
         LTEQ("<="), GTEQ(">="), PLUS("+"), SUB("-"),
         STAR("*"), SLASH("/"), PLUSEQ("+="), SUBEQ("-="),
-        STAREQ("*="), SLASHEQ("/=");
+        STAREQ("*="), SLASHEQ("/="),STRINGLITERAL("string"),
+        TRUE("true"), FALSE("false"), BOOLEAN("boolean");
         //@formatter:on
         private String name;
 
-        TokenKin() {
+        TokenKind() {
         }
 
-        TokenKin(String name) {
+        TokenKind(String name) {
             this.name = name;
         }
     }
@@ -435,6 +467,8 @@ public class Lexer {
     }
 
     public static void main(String[] agrs) {
-        new Lexer("int value = 100;").init().parse();
+        new Lexer("String str = \"Hello World\";" +
+                "int v1 = 100;" +
+                "boolean v2 = true").init().parse();
     }
 }
